@@ -1,0 +1,20 @@
+spring:
+  #时间相差八个小时问题
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #开发模式
+  profiles:
+    active: dev
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+resources:
+  static-locations: classpath:/templates/
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.wip.model
+logging:
+  level:
+    com.wip.dao: DEBUG
